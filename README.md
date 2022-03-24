@@ -11,4 +11,15 @@ Electronica is an e-commerce site that sells wholesale electronics. You have bee
 whose valid transactions are flagged—a cost your client values at $8.
 
 ## Solution:
-As one should, I started by checking whether the data was clean, and there was no missing data in the dataset. As the dataset was clean, Then I started working on feature selection and data preprocessing. The main problem I had was taking care of the column `Country` which had more than 150 countries which was difficult to one-hot encode because of the **Cardinality**. So I used feature engineering to select few countries column with high feature importance only. Then, I started doing data analysis by plotting different columns. I used bar charts and histogram on clock chart to visualize the whole dataset. The result can be seen in the notebook I uploaded. After that I did some feature engineering to extract useful feature using `featureHasher` and checked imporatant explanatory variables.
+
+### Checking Missing Data
+As one should, I started by checking whether the data was clean, and there was no missing data in the dataset. 
+
+### Preprocessing
+As the dataset was clean, Then I started working on feature selection and data preprocessing. The main problem I had was taking care of the column `Country` which had more than 150 countries which was difficult to one-hot encode because of the **Cardinality**. So I used feature engineering to select few countries column with high feature importance only. 
+
+### EDA
+Then, I started doing data analysis by plotting different columns. I used bar charts and histogram on clock chart to visualize the whole dataset. The result can be seen in the notebook I uploaded. 
+
+### Feature Engineering
+After that I did some feature engineering to extract useful feature using `featureHasher` and checked imporatant explanatory variables. 
