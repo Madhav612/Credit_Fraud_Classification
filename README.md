@@ -30,6 +30,8 @@ Since the dataset was highly imbalanced, I had to try several methods to get res
 2. Anomaly Detection using `Isolation Forest` - Not good results
 3. `AutoEncoders` using TensorFlow            - Worse result
 
+I also tried by ubsampling using `SMOTE` but the results were not that great.
+
 Best solution I got was by using `RandomForest`. But then again, since we wanted to reduce the recall, in other words, we wanted to reduce **False Negative** because if we predicted wrongly, the cost would be similar to the amount of purchase which is significantly larger than the $8 which is the cost if we had lower precision, in other words, had more **False Positive**. So Then I tried dropping the columns with lower feature imporatance and than trained `RandomForest` model again where I achieved the Recall of **0.99** for the frauds detected and precision of **0.54** which was considerable tradeoff.
 
 
