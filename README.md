@@ -21,7 +21,7 @@ As the dataset was clean, Then I started working on feature selection and data p
 Then, I started doing data analysis by plotting different columns. I used bar charts and histogram on clock chart to visualize the whole dataset. The result can be seen in the notebook I uploaded. 
 
 ### Feature Engineering
-After that I did some feature engineering to extract useful feature using `featureHasher` and checked imporatant explanatory variables. 
+After that I did some feature engineering to extract useful feature using `featureHasher` and checked imporatant explanatory variables. Using, that I reduced the number of columns from around 170 to 10.
 
 ### Training the Model and Evaluating
 
@@ -32,7 +32,10 @@ Since the dataset was highly imbalanced, I had to try several methods to get res
 
 I also tried by ubsampling using `SMOTE` but the results were not that great.
 
-Best solution I got was by using `RandomForest`. But then again, since we wanted to reduce the recall, in other words, we wanted to reduce **False Negative** because if we predicted wrongly, the cost would be similar to the amount of purchase which is significantly larger than the $8 which is the cost if we had lower precision, in other words, had more **False Positive**. So Then I tried dropping the columns with lower feature imporatance and than trained `RandomForest` model again where I achieved the Recall of **0.99** for the frauds detected and precision of **0.54** which was considerable tradeoff.
+Best solution I got was by using `RandomForest`. But then again, since we wanted to reduce the recall, in other words, we wanted to reduce **False Negative** because if we predicted wrongly, the cost would be similar to the amount of purchase which is significantly larger than the $8 which is the cost if we had lower precision, in other words, had more **False Positive**. So Then I tried dropping the columns with lower feature imporatance and than trained `RandomForest` model again but results I  achieved were not much of an improvement. 
+
+Finally, I used **Optuna** library to optimize the hyperparameters, used Stratified k-fold to check overfitting and finally achieved the **PRAUC score** of **0.51** 
+
 
 
 
