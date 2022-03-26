@@ -34,7 +34,7 @@ I also tried by ubsampling using `SMOTE` but the results were not that great.
 
 Best solution I got was by using `RandomForest`. But then again, since we wanted to reduce the recall, in other words, we wanted to reduce **False Negative** because if we predicted wrongly, the cost would be similar to the amount of purchase which is significantly larger than the $8 which is the cost if we had lower precision, in other words, had more **False Positive**. So Then I tried dropping the columns with lower feature imporatance and than trained `RandomForest` model again but results I  achieved were not much of an improvement. 
 
-Finally, I used **Optuna** library to optimize the hyperparameters, used Stratified k-fold to check overfitting and finally achieved the **PRAUC score** of **0.51** 
+Finally, I used **Optuna** library to optimize the hyperparameters, used Stratified k-fold to check overfitting and finally achieved the **PR AUC score** of **0.51** 
 
 
 
